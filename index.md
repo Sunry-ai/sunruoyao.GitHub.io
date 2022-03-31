@@ -22,8 +22,6 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-### Jekyll Themes
-
 
 ### Support or Contact
 
