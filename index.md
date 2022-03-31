@@ -7,7 +7,6 @@
 
 このページで数学と経営工学の最適化関連な知識に対して自分の心得と考えをここでshareしたいと思います。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
