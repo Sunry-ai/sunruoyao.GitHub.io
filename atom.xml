@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunry-ai.github.io/sunruoyao.github.io/</id>
     <title>Sunry’s　Blog</title>
-    <updated>2022-03-31T15:28:22.979Z</updated>
+    <updated>2022-04-01T02:21:45.854Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunry-ai.github.io/sunruoyao.github.io/"/>
     <link rel="self" href="https://sunry-ai.github.io/sunruoyao.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/home/</id>
         <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/home/">
         </link>
-        <updated>2022-03-31T21:46:56.000Z</updated>
+        <updated>2022-03-31T23:46:56.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
 <p>こんにちは</p>
 </blockquote>
@@ -65,8 +65,12 @@
 <ul>
 <li>研究テーマ：AES暗号の関数変更の安全性への影響</li>
 <li>研究室での発表内容（暗号学関連）：</li>
-<li>輪読の本：Introduction　To　Cryptography<br>
-<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648740487221.png" alt="" loading="lazy"></li>
+<li>輪読の本：Introduction　To　Cryptography
+<ul>
+<li><img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648779685369.png" alt="" loading="lazy"></li>
+<li></li>
+</ul>
+</li>
 <li>
 <h2 id="情報科合同研究室での発表内容機械学習関連">情報科合同研究室での発表内容（機械学習関連）：</h2>
 </li>
