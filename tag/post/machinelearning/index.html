@@ -1,176 +1,155 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MachineLearning | Sunry’s　Blog</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648882324970">
+<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648884053537">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://sunry-ai.github.io/sunruoyao.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="MachineLearning | Sunry’s　Blog - Atom Feed" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-
-
-    <meta name="description" content="Welcome to my world !">
+  <meta name="description" content="Welcome to my world !" />
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://sunry-ai.github.io/sunruoyao.github.io/">
-        <img src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648882324970" class="site-logo">
-        <h1 class="site-title">Sunry’s　Blog</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://sunry-ai.github.io/sunruoyao.github.io/">
+  <img class="avatar" src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648884053537" alt="">
+  </a>
+  <h1 class="site-title">
+    Sunry’s　Blog
+  </h1>
+  <p class="site-description">
+    Welcome to my world !
+  </p>
+  <div class="menu-container">
+    
       
-        
-          <a href="tag/post/aboutme" class="site-nav">
-            About Me
-          </a>
-        
+        <a href="tag/post/aboutme" class="menu">
+          About Me
+        </a>
       
-        
-          <a href="/or" class="site-nav">
-            経営工学関連
-          </a>
-        
+    
       
-        
-          <a href="tag/post/math" class="site-nav">
-            数学関連
-          </a>
-        
+        <a href="/or" class="menu">
+          経営工学関連
+        </a>
       
-        
-          <a href="tag/post/machinelearning" class="site-nav">
-            機械学習関連
-          </a>
-        
+    
       
-        
-          <a href="/post/cryptography" class="site-nav">
-            暗号学関連
-          </a>
-        
+        <a href="tag/post/math" class="menu">
+          数学関連
+        </a>
       
-    </div>
+    
+      
+        <a href="tag/post/machinelearning" class="menu">
+          機械学習関連
+        </a>
+      
+    
+      
+        <a href="/post/cryptography" class="menu">
+          暗号学関連
+        </a>
+      
+    
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
-      
-    </div>
-    <div class="site-description">
-      Welcome to my world !
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
+    
   </div>
 </div>
 
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: MachineLearning</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/bert/">
-                  <h2 class="post-title">論文紹介ーBERT</h2>
-                </a>
-                <div class="post-date">
-                  2022-04-02
-                </div>
-                <div class="post-abstract">
-                  <p>論文「 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding」を紹介します〜。</p>
-
-                </div>
-              </div>
-              
-                <a class="right" href="https://sunry-ai.github.io/sunruoyao.github.io/post/bert/">
-                  <div class="feature-container" style="background-image: url('https://sunry-ai.github.io/sunruoyao.github.io//post-images/bert.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/machinelearning/">
-                  <h2 class="post-title">論文紹介-LayoutLM</h2>
-                </a>
-                <div class="post-date">
-                  2022-04-01
-                </div>
-                <div class="post-abstract">
-                  <p>ここで、論文「 LayoutLM: Pre-training of Text and Layout for Document Image Understanding 」を紹介します😉。</p>
-
-                </div>
-              </div>
-              
-                <a class="right" href="https://sunry-ai.github.io/sunruoyao.github.io/post/machinelearning/">
-                  <div class="feature-container" style="background-image: url('https://sunry-ai.github.io/sunruoyao.github.io//post-images/machinelearning.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
-
-          <div class="pagination-container">
-  
-  
-</div>
-
+        <div class="current-tag-container">
+            <h2 class="title">
+                标签：# MachineLearning
+            </h2> 
         </div>
+        <div class="post-container">
+  
+    <article class="post">
+      <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/bert/">
+        <h2 class="post-title">論文紹介ーBERT</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2022-04-02
+        </span>
+        <span>
+          5 min read
+        </span>
+        
+          <a href="https://sunry-ai.github.io/sunruoyao.github.io/tag/post/machinelearning/" class="post-tag">
+            # MachineLearning
+          </a>
+        
+      </div>
+      
+        <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/bert/" class="post-feature-image" style="background-image: url('https://sunry-ai.github.io/sunruoyao.github.io//post-images/bert.png')">
+        </a>
+      
+      <div class="post-abstract">
+        <p>論文「 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding」を紹介します〜。</p>
+
+      </div>
+    </article>
+  
+    <article class="post">
+      <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/machinelearning/">
+        <h2 class="post-title">論文紹介-LayoutLM</h2>
+      </a>
+      <div class="post-info">
+        <span>
+          2022-04-01
+        </span>
+        <span>
+          4 min read
+        </span>
+        
+          <a href="https://sunry-ai.github.io/sunruoyao.github.io/tag/post/machinelearning/" class="post-tag">
+            # MachineLearning
+          </a>
+        
+      </div>
+      
+        <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/machinelearning/" class="post-feature-image" style="background-image: url('https://sunry-ai.github.io/sunruoyao.github.io//post-images/machinelearning.png')">
+        </a>
+      
+      <div class="post-abstract">
+        <p>ここで、論文「 LayoutLM: Pre-training of Text and Layout for Document Image Understanding 」を紹介します😉。</p>
+
+      </div>
+    </article>
+  
+</div>
+
+        <div class="pagination-container">
+  
+  
+</div>
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
       </div>
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
-
-AOS.init();
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
-</script>
-
-
-  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad()
-  </script>
-
-
-
-
-
   </body>
 </html>

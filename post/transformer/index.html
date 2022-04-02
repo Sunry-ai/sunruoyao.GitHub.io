@@ -1,20 +1,13 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Transformer | Sunry’s　Blog</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648882324970">
+<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648884053537">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://sunry-ai.github.io/sunruoyao.github.io//styles/main.css">
-
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="alternate" type="application/atom+xml" title="Transformer | Sunry’s　Blog - Atom Feed" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
@@ -22,139 +15,172 @@
 LayoutLMをより良い理解できるように、まず「Attentions is All You Need」で提出されたTransformerについて軽く紹介します。
 　例えば、「私は学生」を英語に翻訳したい場合、学..." />
     <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://sunry-ai.github.io/sunruoyao.github.io/">
-        <img src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648882324970" class="site-logo">
-        <h1 class="site-title">Sunry’s　Blog</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://sunry-ai.github.io/sunruoyao.github.io/">
+  <img class="avatar" src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648884053537" alt="">
+  </a>
+  <h1 class="site-title">
+    Sunry’s　Blog
+  </h1>
+  <p class="site-description">
+    Welcome to my world !
+  </p>
+  <div class="menu-container">
+    
       
-        
-          <a href="tag/post/aboutme" class="site-nav">
-            About Me
-          </a>
-        
+        <a href="tag/post/aboutme" class="menu">
+          About Me
+        </a>
       
-        
-          <a href="/or" class="site-nav">
-            経営工学関連
-          </a>
-        
+    
       
-        
-          <a href="tag/post/math" class="site-nav">
-            数学関連
-          </a>
-        
+        <a href="/or" class="menu">
+          経営工学関連
+        </a>
       
-        
-          <a href="tag/post/machinelearning" class="site-nav">
-            機械学習関連
-          </a>
-        
+    
       
-        
-          <a href="/post/cryptography" class="site-nav">
-            暗号学関連
-          </a>
-        
+        <a href="tag/post/math" class="menu">
+          数学関連
+        </a>
       
-    </div>
+    
+      
+        <a href="tag/post/machinelearning" class="menu">
+          機械学習関連
+        </a>
+      
+    
+      
+        <a href="/post/cryptography" class="menu">
+          暗号学関連
+        </a>
+      
+    
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
-      
-    </div>
-    <div class="site-description">
-      Welcome to my world !
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
+    
   </div>
 </div>
 
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">Transformer</h2>
-            <div class="post-date">2022-04-02</div>
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Transformer
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-04-02
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
             
-              <div class="feature-container" style="background-image: url('https://sunry-ai.github.io/sunruoyao.github.io//post-images/transformer.png')">
-              </div>
+              <img class="post-feature-image" src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/transformer.png" alt="">
             
-            <div class="post-content" v-pre>
-              <h2 id="transformer紹介">Transformer紹介</h2>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="transformer紹介">Transformer紹介</h2>
 <p>LayoutLMをより良い理解できるように、まず「Attentions is All You Need」で提出されたTransformerについて軽く紹介します。<br>
 　例えば、「私は学生」を英語に翻訳したい場合、学習データ「私」「は」「学生」をTransformerに入て、「I」「am」「a」「student」を出力することを望ましいですね。Transformerで「Encoder」と「Decoder」という変換器があって、各単語間の関係によって翻訳することができます。Transformerは、単語を順番に計算する代わりに、単語間の距離（Positional Encoding）、注意メカニズム（Multi-Head Attention）、および全結合（Feed Forward）を用いたモデルです。<br>
 <img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648872660732.png" alt="" loading="lazy"><br>
 　Transformerの詳細は「Transformer紹介：Attentions is All You Need」を見ってください。</p>
 
-            </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/home/">
-                  <h3 class="post-title">
-                    About Me
-                  </h3>
-                </a>
               </div>
-            
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#transformer%E7%B4%B9%E4%BB%8B">Transformer紹介</a></li>
+</ul>
+</li>
+</ul>
 
-            
-
-          </div>
-
+              </div>
+            </div>
+          </article>
         </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/home/">
+              <h3 class="post-title">
+                About Me
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
       </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
+    <script>
+      hljs.initHighlightingOnLoad()
 
-AOS.init();
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
-</script>
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
-  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad()
-  </script>
-
-
-
-
-
+    </script>
   </body>
 </html>

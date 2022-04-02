@@ -1,20 +1,13 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>論文紹介ーBERT | Sunry’s　Blog</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648882324970">
+<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648884053537">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://sunry-ai.github.io/sunruoyao.github.io//styles/main.css">
-
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="alternate" type="application/atom+xml" title="論文紹介ーBERT | Sunry’s　Blog - Atom Feed" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
@@ -23,90 +16,94 @@
 背景紹介
 近年、業務の効率化や生産性の向上を実現す..." />
     <meta name="keywords" content="MachineLearning" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://sunry-ai.github.io/sunruoyao.github.io/">
-        <img src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648882324970" class="site-logo">
-        <h1 class="site-title">Sunry’s　Blog</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://sunry-ai.github.io/sunruoyao.github.io/">
+  <img class="avatar" src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648884053537" alt="">
+  </a>
+  <h1 class="site-title">
+    Sunry’s　Blog
+  </h1>
+  <p class="site-description">
+    Welcome to my world !
+  </p>
+  <div class="menu-container">
+    
       
-        
-          <a href="tag/post/aboutme" class="site-nav">
-            About Me
-          </a>
-        
+        <a href="tag/post/aboutme" class="menu">
+          About Me
+        </a>
       
-        
-          <a href="/or" class="site-nav">
-            経営工学関連
-          </a>
-        
+    
       
-        
-          <a href="tag/post/math" class="site-nav">
-            数学関連
-          </a>
-        
+        <a href="/or" class="menu">
+          経営工学関連
+        </a>
       
-        
-          <a href="tag/post/machinelearning" class="site-nav">
-            機械学習関連
-          </a>
-        
+    
       
-        
-          <a href="/post/cryptography" class="site-nav">
-            暗号学関連
-          </a>
-        
+        <a href="tag/post/math" class="menu">
+          数学関連
+        </a>
       
-    </div>
+    
+      
+        <a href="tag/post/machinelearning" class="menu">
+          機械学習関連
+        </a>
+      
+    
+      
+        <a href="/post/cryptography" class="menu">
+          暗号学関連
+        </a>
+      
+    
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
+  <div class="social-container">
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
-      
-    </div>
-    <div class="site-description">
-      Welcome to my world !
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
+    
   </div>
 </div>
 
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">論文紹介ーBERT</h2>
-            <div class="post-date">2022-04-02</div>
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              論文紹介ーBERT
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-04-02
+              </span>
+              <span>
+                5 min read
+              </span>
+              
+                <a href="https://sunry-ai.github.io/sunruoyao.github.io/tag/post/machinelearning/" class="post-tag">
+                  # MachineLearning
+                </a>
+              
+            </div>
             
-              <div class="feature-container" style="background-image: url('https://sunry-ai.github.io/sunruoyao.github.io//post-images/bert.png')">
-              </div>
+              <img class="post-feature-image" src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/bert.png" alt="">
             
-            <div class="post-content" v-pre>
-              <p>論文「 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding」を紹介します〜。</p>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>論文「 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding」を紹介します〜。</p>
 <!-- more -->
 <h2 id="背景紹介">背景紹介</h2>
 <p>近年、業務の効率化や生産性の向上を実現するテクノロジーとして「OCRとRPAの組合せ」が注目を集めています。</p>
@@ -158,58 +155,93 @@ BERTは各単語を対応させて予測するよりも、すべての単語間�
 <p>BERTは、独自の高い性能を持つ2段階のプレトレーニング＋ファインチューンモデリングの実践の基礎を築いています。その後の研究でも、このパターンを参照して多い改良したモデルを提出されます。</p>
 <p>また、 著者らはその論文の中で、「双方向」（Bidirectional Representation）の重要性を示しました。 BERTがこの結論に達して以来、XLNetやALBERTなどの後続のモデルでも、デフォルトの設定として双方向性を使用しています。</p>
 
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%83%8C%E6%99%AF%E7%B4%B9%E4%BB%8B">背景紹介</a></li>
+<li><a href="#bert%E3%81%AE%E9%9D%A9%E6%96%B0%E7%82%B9">BERTの革新点</a></li>
+<li><a href="#bert%E3%81%AE%E4%B8%BB%E3%81%AA%E3%82%A2%E3%82%A4%E3%83%87%E3%82%A3%E3%82%A2">BERTの主なアイディア</a>
+<ul>
+<li><a href="#%E4%BA%8B%E5%89%8D%E5%AD%A6%E7%BF%92%E3%83%BCmasked-lm">事前学習ー「Masked LM」</a></li>
+<li><a href="#%E4%BA%8B%E5%89%8D%E5%AD%A6%E7%BF%92%E3%83%BC-nsp-%E3%82%BF%E3%82%B9%E3%82%AF">事前学習ー「 NSP タスク」</a></li>
+<li><a href="#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%B3%E3%83%81%E3%83%A5%E3%83%8B%E3%83%B3%E3%82%B0%E3%83%BCfine-tuning">「ファインチュニングーFine-Tuning」</a></li>
+</ul>
+</li>
+<li><a href="#bert%E3%83%BC%E6%88%90%E6%9E%9C">「BERTー成果」</a></li>
+<li><a href="#bert%E3%83%BC%E8%B2%A2%E7%8C%AE">「BERTー貢献」</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://sunry-ai.github.io/sunruoyao.github.io/tag/post/machinelearning/" class="tag">
-                    MachineLearning
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/math/">
-                  <h3 class="post-title">
-                    Math
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-
-          </div>
-
+          </article>
         </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/burutohuosuatatuku-brute-force-attack/">
+              <h3 class="post-title">
+                ブルートフォースアタック  （Brute-force attack）
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
       </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
+    <script>
+      hljs.initHighlightingOnLoad()
 
-AOS.init();
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
-</script>
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
-  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad()
-  </script>
-
-
-
-
-
+    </script>
   </body>
 </html>
