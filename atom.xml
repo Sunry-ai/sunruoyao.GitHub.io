@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunry-ai.github.io/sunruoyao.github.io/</id>
     <title>Sunry’s　Blog</title>
-    <updated>2022-04-02T10:37:27.706Z</updated>
+    <updated>2022-04-02T11:22:19.651Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunry-ai.github.io/sunruoyao.github.io/"/>
     <link rel="self" href="https://sunry-ai.github.io/sunruoyao.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://sunry-ai.github.io/sunruoyao.github.io/images/avatar.png</logo>
     <icon>https://sunry-ai.github.io/sunruoyao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Sunry’s　Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[高速指数関数 Fast Exponentiation]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/fast-exponentiation/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/fast-exponentiation/">
+        </link>
+        <updated>2022-04-02T12:07:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>Fast Exponentiationの定義・性質とアルゴリズムを紹介します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Fast Exponentiationの定義・性質とアルゴリズムを紹介します。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[群の位数  Order of Group Elements]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/group-elements/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/group-elements/">
+        </link>
+        <updated>2022-04-02T11:59:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>群の位数について性質を説明します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>群の位数について性質を説明します。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[拡張ユークリッドアルゴリズム（Extended Euclidean Algorithm）]]></title>
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/euclidean-algorithm/</id>
@@ -21,6 +43,17 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>ユークリッド・アルゴリズムは、2つの整数の最大公約数を非常に効率的に求めるものです。</p>
 <p>拡張ユークリッドアルゴリズムの解析・性質・時間複雑度をここで説明します〜</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[既約剰余類群 　Multiplicative Group of Residues mod m]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/multiplicative-group-of-residues-mod-m/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/multiplicative-group-of-residues-mod-m/">
+        </link>
+        <updated>2022-04-02T11:40:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>mを法とする既約剰余類群の定理・性質を紹介します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>mを法とする既約剰余類群の定理・性質を紹介します。</p>
 ]]></content>
     </entry>
     <entry>
@@ -91,39 +124,6 @@
         <summary type="html"><![CDATA[<p>アプリケーションの実行時間を見積もるためには、多倍長の整数を剰余で加算・乗算・除算するのような演算の時間複雑度を計算する必要があります。SchönhageとStrassenのアルゴリズムもこの文章で説明します。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>アプリケーションの実行時間を見積もるためには、多倍長の整数を剰余で加算・乗算・除算するのような演算の時間複雑度を計算する必要があります。SchönhageとStrassenのアルゴリズムもこの文章で説明します。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[多項式時間と最大公約数]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/math/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/math/">
-        </link>
-        <updated>2022-04-02T07:31:18.000Z</updated>
-        <summary type="html"><![CDATA[<p>多項式時間と最大公約数の定義・関連な定理などを紹介します。🤗</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>多項式時間と最大公約数の定義・関連な定理などを紹介します。🤗</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Transformer]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/transformer/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/transformer/">
-        </link>
-        <updated>2022-04-02T06:13:19.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[About Me]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/home/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/home/">
-        </link>
-        <updated>2022-04-01T10:46:56.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>こんにちは</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>こんにちは</p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
