@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunry-ai.github.io/sunruoyao.github.io/</id>
     <title>Sunry’s　Blog</title>
-    <updated>2022-04-02T14:10:36.426Z</updated>
+    <updated>2022-04-02T14:49:32.287Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunry-ai.github.io/sunruoyao.github.io/"/>
     <link rel="self" href="https://sunry-ai.github.io/sunruoyao.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://sunry-ai.github.io/sunruoyao.github.io/images/avatar.png</logo>
     <icon>https://sunry-ai.github.io/sunruoyao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Sunry’s　Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[AESの詳細ー輪読]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/aes/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/aes/">
+        </link>
+        <updated>2022-04-02T15:29:04.000Z</updated>
+        <summary type="html"><![CDATA[<p>ここで、AES暗号の内部仕組みを説明します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>ここで、AES暗号の内部仕組みを説明します。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DES-Sboxから復号化まで]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/des-sbox/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/des-sbox/">
+        </link>
+        <updated>2022-04-02T15:11:29.000Z</updated>
+        <summary type="html"><![CDATA[<p>DESの安全性の核心は、 Sボックスという操作にあります。ここで、DESのSboxから復号化まで紹介します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>DESの安全性の核心は、 Sボックスという操作にあります。ここで、DESのSboxから復号化まで紹介します。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Construction of Finite Fieldsー有限体]]></title>
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/construction-of-finite-field/</id>
@@ -102,30 +124,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>群論は数学の一つ重要な学科です。<br>
 ここで群の定義と性質を簡単に紹介します。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ブルートフォースアタック  （Brute-force attack）]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/burutohuosuatatuku-brute-force-attack/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/burutohuosuatatuku-brute-force-attack/">
-        </link>
-        <updated>2022-04-02T11:09:33.000Z</updated>
-        <summary type="html"><![CDATA[<p>ブルートフォースアタックは、正しい鍵が見つかるまでは、可能性のある鍵を順番に探し出し、考えられる全てのパターンを試す方法のことです。<br>
-ここで、ブルートフォースアタックを説明します。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>ブルートフォースアタックは、正しい鍵が見つかるまでは、可能性のある鍵を順番に探し出し、考えられる全てのパターンを試す方法のことです。<br>
-ここで、ブルートフォースアタックを説明します。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[素数への因数分解]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/su-shu-henoyin/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/su-shu-henoyin/">
-        </link>
-        <updated>2022-04-02T10:52:28.000Z</updated>
-        <summary type="html"><![CDATA[<p>素因数分解の関連知識を基づいて初等整数論の主要定理もここで証明します。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>素因数分解の関連知識を基づいて初等整数論の主要定理もここで証明します。</p>
 ]]></content>
     </entry>
 </feed>
