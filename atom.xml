@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunry-ai.github.io/sunruoyao.github.io/</id>
     <title>Sunry’s　Blog</title>
-    <updated>2022-04-02T09:24:39.743Z</updated>
+    <updated>2022-04-02T10:37:27.706Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunry-ai.github.io/sunruoyao.github.io/"/>
     <link rel="self" href="https://sunry-ai.github.io/sunruoyao.github.io/atom.xml"/>
@@ -10,6 +10,43 @@
     <logo>https://sunry-ai.github.io/sunruoyao.github.io/images/avatar.png</logo>
     <icon>https://sunry-ai.github.io/sunruoyao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Sunry’s　Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[拡張ユークリッドアルゴリズム（Extended Euclidean Algorithm）]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/euclidean-algorithm/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/euclidean-algorithm/">
+        </link>
+        <updated>2022-04-02T11:57:05.000Z</updated>
+        <summary type="html"><![CDATA[<p>ユークリッド・アルゴリズムは、2つの整数の最大公約数を非常に効率的に求めるものです。</p>
+<p>拡張ユークリッドアルゴリズムの解析・性質・時間複雑度をここで説明します〜</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>ユークリッド・アルゴリズムは、2つの整数の最大公約数を非常に効率的に求めるものです。</p>
+<p>拡張ユークリッドアルゴリズムの解析・性質・時間複雑度をここで説明します〜</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Residue Class Ring　剰余類環＋Fields　体]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/residue-class-ring-sheng-yu-lei-huan-fields-ti/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/residue-class-ring-sheng-yu-lei-huan-fields-ti/">
+        </link>
+        <updated>2022-04-02T11:24:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>この文章は環・剰余類環・体の定義・性質を説明します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>この文章は環・剰余類環・体の定義・性質を説明します。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Groups　群 ]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/groups/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/groups/">
+        </link>
+        <updated>2022-04-02T11:14:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>群論は数学の一つ重要な学科です。<br>
+ここで群の定義と性質を簡単に紹介します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>群論は数学の一つ重要な学科です。<br>
+ここで群の定義と性質を簡単に紹介します。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ブルートフォースアタック  （Brute-force attack）]]></title>
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/burutohuosuatatuku-brute-force-attack/</id>
@@ -24,16 +61,14 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[拡張ユークリッドアルゴリズム（Extended Euclidean Algorithm）]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/yukuritudoarugorizumuextended-euclidean-algorithm/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/yukuritudoarugorizumuextended-euclidean-algorithm/">
+        <title type="html"><![CDATA[素数への因数分解]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/su-shu-henoyin/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/su-shu-henoyin/">
         </link>
-        <updated>2022-04-02T10:57:05.000Z</updated>
-        <summary type="html"><![CDATA[<p>ユークリッド・アルゴリズムは、2つの整数の最大公約数を非常に効率的に求めるものです。</p>
-<p>拡張ユークリッドアルゴリズムの解析・性質・時間複雑度をここで説明します〜</p>
+        <updated>2022-04-02T10:52:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>素因数分解の関連知識を基づいて初等整数論の主要定理もここで証明します。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>ユークリッド・アルゴリズムは、2つの整数の最大公約数を非常に効率的に求めるものです。</p>
-<p>拡張ユークリッドアルゴリズムの解析・性質・時間複雑度をここで説明します〜</p>
+        <content type="html"><![CDATA[<p>素因数分解の関連知識を基づいて初等整数論の主要定理もここで証明します。</p>
 ]]></content>
     </entry>
     <entry>
@@ -89,30 +124,6 @@
         <content type="html"><![CDATA[<blockquote>
 <p>こんにちは</p>
 </blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[論文紹介-LayoutLM]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/machinelearning/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/machinelearning/">
-        </link>
-        <updated>2022-04-01T05:36:28.000Z</updated>
-        <summary type="html"><![CDATA[<p>ここで、論文「 LayoutLM: Pre-training of Text and Layout for Document Image Understanding 」を紹介します😉。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>ここで、論文「 LayoutLM: Pre-training of Text and Layout for Document Image Understanding 」を紹介します😉。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Divisibility]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/div/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/div/">
-        </link>
-        <updated>2018-12-12T04:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>割り切れる＝divide　<br>
-「a | b」　についての紹介🤗</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>割り切れる＝divide　<br>
-「a | b」　についての紹介🤗</p>
 ]]></content>
     </entry>
 </feed>
