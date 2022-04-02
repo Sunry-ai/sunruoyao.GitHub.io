@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" >
 
-<title>hi | Sunry’s　Blog</title>
+<title>論文紹介-LayoutLM | Sunry’s　Blog</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648869323090">
+<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648876284655">
 <link rel="stylesheet" href="https://sunry-ai.github.io/sunruoyao.github.io//styles/main.css">
 
 
@@ -18,8 +18,9 @@
 
 
 
-    <meta name="description" content="皆さん、こんにちは。
-" />
+    <meta name="description" content="ここで、論文「 LayoutLM: Pre-training of Text and Layout for Document Image Understanding 」を紹介します😉。
+
+論文リンク：https://arxiv.org/a..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -29,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://sunry-ai.github.io/sunruoyao.github.io/">
-        <img src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648869323090" class="site-logo">
+        <img src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648876284655" class="site-logo">
         <h1 class="site-title">Sunry’s　Blog</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -91,11 +92,75 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">hi</h2>
+            <h2 class="post-title">論文紹介-LayoutLM</h2>
             <div class="post-date">2022-04-01</div>
             
+              <div class="feature-container" style="background-image: url('https://sunry-ai.github.io/sunruoyao.github.io//post-images/tag.png')">
+              </div>
+            
             <div class="post-content" v-pre>
-              <p>皆さん、こんにちは。</p>
+              <p>ここで、論文「 LayoutLM: Pre-training of Text and Layout for Document Image Understanding 」を紹介します😉。</p>
+<!-- more -->
+<p>論文リンク：<a href="https://arxiv.org/abs/1912.13318">https://arxiv.org/abs/1912.13318</a></p>
+<h2 id="背景紹介">背景紹介</h2>
+<p>近年、業務の効率化や生産性の向上を実現するテクノロジーとして「OCRとRPAの組合せ」が注目を集めています。<br>
+簡単に言うと、OCRとRPAを組合せることで書類の手入力の代わりにOCRモデルで文字を認識してもらい、識別された結果を自動的にRPAシステムに導入できます。しかし、レシートや、請求書のような特定な格式があるドキュメントから「金額」、「アカウント」など必要な部分だけを識別することが難しいです。ですので、格式によらず必要な内容を抽出することが現在の一つ課題となっています。</p>
+<h3 id="it背景紹介">IT背景紹介</h3>
+<p>近年、自然言語処理技術の進化によって、自動的に特徴量を抽出ができる深層学習に基づいた固有表現抽出NER(Named Entity Recognition)の方法が広く使われています。</p>
+<p><em>固有表現抽出(Named Entity Recognition、NER)：文章中に特定の意味を持つ実体（人名、地名、機関名、固有名詞など）を識別することです。</em></p>
+<p>代表的な手法として、LSTM+CRF,S-LSTMなどが挙げられます。2018年の自然言語処理に大きな革新を持ってきた「BERT」の登場により、非常に高精度のNERができるようになりました。<br>
+　今回紹介するのは、2020年に発表された「LayoutLM」です。</p>
+<h2 id="layoutlmの最大の特徴">LayoutLMの最大の特徴</h2>
+<p>単純な語順だけでなく、テキストフィールドの文書内での<strong>位置</strong>や<strong>レイアウト情報</strong>（字の大きさなど）をエンコードし、それらの出現確率を拡張言語モデルとして学習することはLayoutLMの特徴です。</p>
+<p>以前の「BERT」などの自然言語処理モデルと比べて、「LayoutLM」は文字内容と視覚情報を結合して、各部分の内容を正確的に識別することができます。</p>
+<h2 id="layoutlmの仕組み">LayoutLMの仕組み</h2>
+<ul>
+<li>
+<p>まず、前処理モデルを使用して入力データの必要なフォーマット情報を得ます。</p>
+<p>論文では、OCRなどの技術により、テキストとそれに対応する位置情報やフォーマット情報を入力データとして取得します。</p>
+</li>
+<li>
+<p>Embedding層を作成します。</p>
+<p>文書構造と視覚情報を効果的に組み合わせるために、論文の著者らは既存の学習済みモデルに2次元位置Embedding層（2-D Position Embedding）と画像Embedding層（Image Embedding）の2つのEmbedding層を新たに追加します。</p>
+<p><em>2次元位置Embedding層：ドキュメント内のテキストの位置に対応する座標を仮想座標に変換した得たものが2次元位置Embedding層（4つサブレイヤーがある）と言います。</em><br>
+Layout LMのアーキテクチャを以下の図に示します。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648876065698.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>事前学習に進みます。<br>
+事前学習の段階では、Masked Visual-Language Model（MVLM）とMulti-label Document Classification (MDC) という2つの自己教師あり学習タスクを提案されます。</p>
+<ul>
+<li>
+<p>Masked Visual-Language Model（MVLM）<br>
+　　予測単語の中でランダムに選んでマスクをつけて、位置関係によってマスクされた単語のおおよその種類を判断できるようなモデルはMVLMです。<br>
+　　例えば、レシート🧾で「金額：1000円」を学習データとして、今その行の「金額」の部分をマスクして、MVLMモデルに入れます。モデルのミッションは「●：1000円」を識別して●を予測することです。モデルの内部：●は1000円の左にあってので、'では、●は金と関連することだ'と推理して、最終に●が「金額」だと正確的に予測できました。<br>
+　　このようなレイアウト情報を加えたMVLMモデルはテキスト位置と意味の関係をより良い学習できます。</p>
+</li>
+<li>
+<p>Multi-label Document Classification (MDC)<br>
+　　文書画像理解では、高品質な文書レベルの表現を分類モデルが求められます。論文で各文書画像のラベルをつける為に、MDC（Multi-label Document Classification）損失を使用しています。この分類モデルは、異なるドメインからの知識を分類し、より良い文書レベルの表現を生成することができます。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ファインチューニングします<br>
+論文で事前に学習されたLayoutLMモデルは、フォーム理解タスク、レシート理解タスク、文書画像分類タスクを含む3つのタスクでファインチューニングされます。</p>
+<ul>
+<li>ファインチューニングでは学習済みモデルの重みを初期値とし、再度学習によって微調整します。</li>
+<li>フォームとレシート理解タスクでは、LayoutLMは各トークンに対してタグを予測し、シーケンシャルラベリング（sequential labeling）を使ってデータセット内の各エンティティ(entity)タイプを検出します。</li>
+<li>文書画像分類タスクの場合、LayoutLMは、文の先頭の提示トークン「CLS」の表現を使ってクラスラベルを予測します。</li>
+</ul>
+</li>
+</ul>
+<h2 id="達成した結果">達成した結果</h2>
+<p>結果として、LayoutLMは上記の３つタスクで全てこれまでの最高の結果を達成しました。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648876165929.png" alt="" loading="lazy"></p>
+<h2 id="結論">結論</h2>
+<p>結論として、LayoutLMは、Transformerを基づいて、トークン埋め込み、レイアウトEmbedding層、画像Embedding層などのマルチモーダルな入力を活用することができます。　　<br>
+　また、このモデルは、大規模なラベルなしのスキャン文書画像に基づいて、自己教師あり学習が簡単にできます。<br>
+　今後は、LayoutLMの可能性を広げるために、より大規模なトレーニングデータの導入とともに、他の効果的な事前トレーニングタスクを試す必要があります。</p>
+<p></p>
+<p></p>
 
             </div>
             

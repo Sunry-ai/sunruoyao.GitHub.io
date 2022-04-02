@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunry-ai.github.io/sunruoyao.github.io/</id>
     <title>Sunry’s　Blog</title>
-    <updated>2022-04-02T03:16:07.336Z</updated>
+    <updated>2022-04-02T05:11:29.848Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunry-ai.github.io/sunruoyao.github.io/"/>
     <link rel="self" href="https://sunry-ai.github.io/sunruoyao.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://sunry-ai.github.io/sunruoyao.github.io/images/avatar.png</logo>
     <icon>https://sunry-ai.github.io/sunruoyao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Sunry’s　Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Transformer]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/transformer/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/transformer/">
+        </link>
+        <updated>2022-04-02T06:13:19.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[About Me]]></title>
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/home/</id>
@@ -23,97 +30,17 @@
         <content type="html"><![CDATA[<blockquote>
 <p>こんにちは</p>
 </blockquote>
-<!-- more -->
-<h2 id="blogについて">🏠 BLOGについて</h2>
-<blockquote>
-<p>このBLOGで数学と経営工学の最適化関連な知識に対して自分の心得と考えをここでシェアしたいと思いま〜す。</p>
-</blockquote>
-<!-- more -->
-<h2 id="自己紹介">👩‍💻 自己紹介</h2>
-<ul>
-<li>
-<p>2014-2017 : 中国・大連市・育明高校</p>
-<ul>
-<li>大連市優秀学生</li>
-<li>全国作文コンテスト・優秀奨</li>
-<li>学生自治会・対外連絡部・副部長</li>
-</ul>
-</li>
-<li>
-<p>2018-2022 : 日本・東京・お茶の水女子大学　理学部　数学科</p>
-<ul>
-<li>
-<p>大学での活動</p>
-<ul>
-<li>2019.4-2020.3 学生自治会・幹部・副会長</li>
-<li>2018.4-2021.3  書道部</li>
-</ul>
-</li>
-<li>
-<p>インターン</p>
-<ul>
-<li>2019.4-2021.1 新中野の某IT会社で長期インターン
-<ul>
-<li>高速道路の渋滞度予測プロジェクト</li>
-<li>花火大会の渋滞度の予測と人流誘導プランの作成</li>
-<li>京都市の地域ごとで未来48時間の一般道路の渋滞度の予測</li>
-<li>使った言語：Python　チームメンバー：２−３人</li>
-</ul>
-</li>
-<li>2018年〜　留学生向けの塾で高校数学講師</li>
-<li>2020年〜　中国医学部進学向けの高校数学講師</li>
-<li>2021年〜　大学院進学向けのオペレーションズ・リサーチ講師</li>
-</ul>
-</li>
-<li>
-<p>研究（萩田研）</p>
-<ul>
-<li>研究テーマ：AES暗号の関数変更の安全性への影響</li>
-<li>研究室での発表内容（暗号学関連）：
-<ul>
-<li>ブルートフォースアタック（ Brute-force attack）の紹介</li>
-<li>輪読の本：Introduction　To　Cryptography<br>
-<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648779685369.png" alt="" loading="lazy"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>情報科合同研究室での発表内容（機械学習関連）：</p>
-<ul>
-<li>SVMの紹介</li>
-<li>BERT論文紹介：＜BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding＞</li>
-<li>LayoutLM論文紹介：＜LayoutLM: Pre-training of Text and Layout for Document Image Understanding ＞</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>2022 ~ : 日本・東京・東京工業大学　工学部　経営工学コース　修士課程</p>
-<ul>
-<li>研究（塩浦研）</li>
-</ul>
-</li>
-</ul>
-<h2 id="趣味">👩‍🍳 趣味</h2>
-<ul>
-<li>アクリル画👩‍🎨</li>
-<li>料理👩‍🌾</li>
-<li>書道✍️</li>
-<li>DIY（リースなど）💐<br>
-<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648869236270.jpg" alt="" loading="lazy"></li>
-</ul>
-<h2 id="リンク">📬 リンク</h2>
-<p>Mail：sunruoyao121@gmail.com</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[hi]]></title>
+        <title type="html"><![CDATA[論文紹介-LayoutLM]]></title>
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/tag/</id>
         <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/tag/">
         </link>
-        <updated>2022-03-31T15:36:28.000Z</updated>
-        <content type="html"><![CDATA[<p>皆さん、こんにちは。</p>
+        <updated>2022-04-01T01:36:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>ここで、論文「 LayoutLM: Pre-training of Text and Layout for Document Image Understanding 」を紹介します😉。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>ここで、論文「 LayoutLM: Pre-training of Text and Layout for Document Image Understanding 」を紹介します😉。</p>
 ]]></content>
     </entry>
     <entry>
@@ -127,25 +54,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | Sunry’s　Blog</title>
+<title>Transformer | Sunry’s　Blog</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,10 @@
 
 
 
-    <meta name="description" content="Welcome to my world !">
+    <meta name="description" content="Transformer紹介
+LayoutLMをより良い理解できるように、まず「Attentions is All You Need」で提出されたTransformerについて軽く紹介します。
+　例えば、「私は学生」を英語に翻訳したい場合、学..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -88,71 +91,36 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
+          <div class="post-detail">
+            <h2 class="post-title">Transformer</h2>
+            <div class="post-date">2022-04-02</div>
+            
+              <div class="feature-container" style="background-image: url('https://sunry-ai.github.io/sunruoyao.github.io//post-images/transformer.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="transformer紹介">Transformer紹介</h2>
+<p>LayoutLMをより良い理解できるように、まず「Attentions is All You Need」で提出されたTransformerについて軽く紹介します。<br>
+　例えば、「私は学生」を英語に翻訳したい場合、学習データ「私」「は」「学生」をTransformerに入て、「I」「am」「a」「student」を出力することを望ましいですね。Transformerで「Encoder」と「Decoder」という変換器があって、各単語間の関係によって翻訳することができます。Transformerは、単語を順番に計算する代わりに、単語間の距離（Positional Encoding）、注意メカニズム（Multi-Head Attention）、および全結合（Feed Forward）を用いたモデルです。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648872660732.png" alt="" loading="lazy"><br>
+　Transformerの詳細は「Transformer紹介：Attentions is All You Need」を見ってください。</p>
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
+            </div>
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2022</h2>
-              
-                
-                  <article class="post">
-                    <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/transformer/">
-                      <h2 class="post-title">
-                        Transformer
-                      </h2>
-                    </a>
-                  </article>
-                
-              
-                
-                  <article class="post">
-                    <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/home/">
-                      <h2 class="post-title">
-                        About Me
-                      </h2>
-                    </a>
-                  </article>
-                
-              
-                
-                  <article class="post">
-                    <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/tag/">
-                      <h2 class="post-title">
-                        論文紹介-LayoutLM
-                      </h2>
-                    </a>
-                  </article>
-                
-              
-                
-              
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2018</h2>
-              
-                
-              
-                
-              
-                
-              
-                
-                  <article class="post">
-                    <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/hello-gridea/">
-                      <h2 class="post-title">
-                        Hello Gridea
-                      </h2>
-                    </a>
-                  </article>
-                
-              
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/home/">
+                  <h3 class="post-title">
+                    About Me
+                  </h3>
+                </a>
+              </div>
             
+
+            
+
           </div>
-
-          <div class="pagination-container">
-  
-  
-</div>
 
         </div>
       </div>
