@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunry-ai.github.io/sunruoyao.github.io/</id>
     <title>Sunry’s　Blog</title>
-    <updated>2022-04-02T07:24:52.728Z</updated>
+    <updated>2022-04-02T08:21:09.425Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunry-ai.github.io/sunruoyao.github.io/"/>
     <link rel="self" href="https://sunry-ai.github.io/sunruoyao.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://sunry-ai.github.io/sunruoyao.github.io/images/avatar.png</logo>
     <icon>https://sunry-ai.github.io/sunruoyao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Sunry’s　Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[ブルートフォースアタック  （Brute-force attack）]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/burutohuosuatatuku-brute-force-attack/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/burutohuosuatatuku-brute-force-attack/">
+        </link>
+        <updated>2022-04-02T11:09:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>ブルートフォースアタックは、正しい鍵が見つかるまでは、可能性のある鍵を順番に探し出し、考えられる全てのパターンを試す方法のことです。<br>
+ここで、ブルートフォースアタックを説明します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>ブルートフォースアタックは、正しい鍵が見つかるまでは、可能性のある鍵を順番に探し出し、考えられる全てのパターンを試す方法のことです。<br>
+ここで、ブルートフォースアタックを説明します。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[論文紹介ーBERT]]></title>
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/bert/</id>
@@ -22,16 +35,14 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[ブルートフォースアタック  （Brute-force attack）]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/burutohuosuatatuku-brute-force-attack/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/burutohuosuatatuku-brute-force-attack/">
+        <title type="html"><![CDATA[いろいろな演算の時間複雑度]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/time complexity/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/time complexity/">
         </link>
-        <updated>2022-04-02T08:09:33.000Z</updated>
-        <summary type="html"><![CDATA[<p>ブルートフォースアタックは、正しい鍵が見つかるまでは、可能性のある鍵を順番に探し出し、考えられる全てのパターンを試す方法のことです。<br>
-ここで、ブルートフォースアタックを説明します。</p>
+        <updated>2022-04-02T08:52:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>アプリケーションの実行時間を見積もるためには、多倍長の整数を剰余で加算・乗算・除算するのような演算の時間複雑度を計算する必要があります。SchönhageとStrassenのアルゴリズムもこの文章で説明します。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>ブルートフォースアタックは、正しい鍵が見つかるまでは、可能性のある鍵を順番に探し出し、考えられる全てのパターンを試す方法のことです。<br>
-ここで、ブルートフォースアタックを説明します。</p>
+        <content type="html"><![CDATA[<p>アプリケーションの実行時間を見積もるためには、多倍長の整数を剰余で加算・乗算・除算するのような演算の時間複雑度を計算する必要があります。SchönhageとStrassenのアルゴリズムもこの文章で説明します。</p>
 ]]></content>
     </entry>
     <entry>
@@ -76,10 +87,10 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Divisibility]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/hello-gridea/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/hello-gridea/">
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/div/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/div/">
         </link>
-        <updated>2018-12-12T01:00:00.000Z</updated>
+        <updated>2018-12-12T04:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>割り切れる＝divide　<br>
 「a | b」　についての紹介🤗</p>
 ]]></summary>

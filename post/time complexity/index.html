@@ -1,0 +1,300 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>いろいろな演算の時間複雑度 | Sunry’s　Blog</title>
+<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648887617211">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://sunry-ai.github.io/sunruoyao.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="いろいろな演算の時間複雑度 | Sunry’s　Blog - Atom Feed" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="アプリケーションの実行時間を見積もるためには、多倍長の整数を剰余で加算・乗算・除算するのような演算の時間複雑度を計算する必要があります。SchönhageとStrassenのアルゴリズムもこの文章で説明します。
+
+加法/減法：
+a=1010..." />
+    <meta name="keywords" content="cryptography,Math,MachineLearning" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://sunry-ai.github.io/sunruoyao.github.io/">
+  <img class="avatar" src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648887617211" alt="">
+  </a>
+  <h1 class="site-title">
+    Sunry’s　Blog
+  </h1>
+  <p class="site-description">
+    Welcome to my world !
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="tag/post/aboutme" class="menu">
+          About Me
+        </a>
+      
+    
+      
+        <a href="/or" class="menu">
+          経営工学関連
+        </a>
+      
+    
+      
+        <a href="tag/post/math" class="menu">
+          数学関連
+        </a>
+      
+    
+      
+        <a href="tag/post/machinelearning" class="menu">
+          機械学習関連
+        </a>
+      
+    
+      
+        <a href="tag/post/cryptography" class="menu">
+          暗号学関連
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              いろいろな演算の時間複雑度
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-04-02
+              </span>
+              <span>
+                5 min read
+              </span>
+              
+                <a href="https://sunry-ai.github.io/sunruoyao.github.io/tag/post/cryptography/" class="post-tag">
+                  # cryptography
+                </a>
+              
+                <a href="https://sunry-ai.github.io/sunruoyao.github.io/tag/post/math/" class="post-tag">
+                  # Math
+                </a>
+              
+                <a href="https://sunry-ai.github.io/sunruoyao.github.io/tag/post/machinelearning/" class="post-tag">
+                  # MachineLearning
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>アプリケーションの実行時間を見積もるためには、多倍長の整数を剰余で加算・乗算・除算するのような演算の時間複雑度を計算する必要があります。SchönhageとStrassenのアルゴリズムもこの文章で説明します。</p>
+<!-- more -->
+<h2 id="加法減法">加法/減法：</h2>
+<p>a=10101 , b=111, a+b=?　の解法を思い出してください。</p>
+<h3 id="高校の方法">高校の方法：</h3>
+<p>まず、2進数を10進数に変換してから、10進数の結果を2進数に変換します。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>=</mo><mn>1</mn><mo>∗</mo><msup><mn>2</mn><mn>0</mn></msup><mo>+</mo><mn>0</mn><mo>∗</mo><msup><mn>2</mn><mn>1</mn></msup><mo>+</mo><mn>1</mn><mo>∗</mo><msup><mn>2</mn><mn>2</mn></msup><mo>+</mo><mn>0</mn><mo>∗</mo><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><mn>1</mn><mo>∗</mo><msup><mn>2</mn><mn>4</mn></msup><mo>=</mo><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>16</mn><mo>=</mo><mn>21</mn></mrow><annotation encoding="application/x-tex">a=1 * 2^{0}+0 * 2^{1}+1 * 2^{2}+0 * 2^{3}+1 * 2^{4}=1+4+16=21</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">6</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">1</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi><mo>=</mo><mn>1</mn><mo>∗</mo><msup><mn>2</mn><mn>0</mn></msup><mo>+</mo><mn>1</mn><mo>∗</mo><msup><mn>2</mn><mn>1</mn></msup><mo>+</mo><mn>1</mn><mo>∗</mo><msup><mn>2</mn><mn>2</mn></msup><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>4</mn><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">b=1 * 2^{0}+1 * 2^{1}+1 * 2^{2}=1+2+4=7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><mn>21</mn><mo>+</mo><mn>7</mn><mo>=</mo><mn>28</mn><mo>=</mo><mn>11100</mn></mrow><annotation encoding="application/x-tex">a+b=21+7=28=11100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">8</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span></span></span></span><br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648886271427.png" alt="" loading="lazy"></p>
+<h3 id="より効率的な方法">より効率的な方法</h3>
+<p>aとb（２進数）を正の整数として、aの2進数の長さをmとし、bの2進数の長さをnとします。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648886544124.png" alt="" loading="lazy"></p>
+<h3 id="時間複雑度">時間複雑度</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> :定数時間--データ数 nがどんな大きさであっても必ず同じステップ数で実行できるアルゴリズムです。</p>
+<p><mark>2ビットの加算には時間<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>がかかると仮定すると、加算 a+b 全体には時間<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">O</mi><mo>(</mo><mi>max</mi><mo>⁡</mo><mo>{</mo><mi mathvariant="normal">m</mi><mo separator="true">,</mo><mi mathvariant="normal">n</mi><mo>}</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathrm{O}(\max \{\mathrm{m}, \mathrm{n}\})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">O</span></span><span class="mopen">(</span><span class="mop">max</span><span class="mopen">{</span><span class="mord"><span class="mord mathrm">m</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">n</span></span><span class="mclose">}</span><span class="mclose">)</span></span></span></span>が必要です。<br>
+同様に、差 b-a も時間<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">O</mi><mo>(</mo><mi>max</mi><mo>⁡</mo><mo>{</mo><mi mathvariant="normal">m</mi><mo separator="true">,</mo><mi mathvariant="normal">n</mi><mo>}</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathrm{O}(\max \{\mathrm{m}, \mathrm{n}\})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">O</span></span><span class="mopen">(</span><span class="mop">max</span><span class="mopen">{</span><span class="mord"><span class="mord mathrm">m</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">n</span></span><span class="mclose">}</span><span class="mclose">)</span></span></span></span>が必要です。</mark></p>
+<h2 id="乗法">乗法</h2>
+<p>a=10101 , b=1０1,  a×b =?　の解法を思い出してください。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648886717153.png" alt="" loading="lazy"></p>
+<p>bを右から左に見ると、それぞれの1に対して、aの右端のビットが現在の1の下になるようにaを書きます。<br>
+aとbを足し合わせれば結果が出ます。aとb（２進数）を正の整数として、aの2進数の長さをmとし、bの2進数の長さをnとすると、このような追加はいずれも時間O(m)を要し、O(n)個の追加が必要です。</p>
+<p><mark>ですので、この計算には<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>m</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(mn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">m</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>の時間がかかります。</mark></p>
+<h3 id="schönhageとstrassenのアルゴリズム">SchönhageとStrassenのアルゴリズム</h3>
+<h4 id="特徴">特徴：</h4>
+<ul>
+<li>2つの n ビット数を<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi mathvariant="normal">・</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mi mathvariant="normal">・</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n・log n・ loglog n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord cjk_fallback">・</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mord cjk_fallback">・</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>の時間で乗算できます。</li>
+<li>特にものすごく長い桁数(1億桁とか)の多倍長乗算に適用することで計算効率を上げることができます。</li>
+</ul>
+<h4 id="手順">手順:</h4>
+<ul>
+<li>
+<p>数を短い多倍長数に分割して</p>
+</li>
+<li>
+<p>（広義の）フーリエ変換して</p>
+</li>
+<li>
+<p>項ごとにかけて（広義の）フーリエ逆変換をすることで畳み込み乗算</p>
+</li>
+<li>
+<p>結果を得る</p>
+</li>
+<li>
+<p>その詳細とpython コードを <a href="https://qiita.com/peria/items/19e37b192cb62bdbc3a1">https://qiita.com/peria/items/19e37b192cb62bdbc3a1</a> 参照できます。</p>
+<p>実際には、このアルゴリズムは10,000ビット以下のオペランドでは先ほど紹介した方法よりも効率が悪いです。</p>
+</li>
+</ul>
+<h2 id="除法">除法：</h2>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>10001</mn><msub><mn>1</mn><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msub><mo>÷</mo><mn>10</mn><msub><mn>1</mn><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msub></mrow><annotation encoding="application/x-tex">100011_{(2)} \div 101_{(2)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9996399999999999em;vertical-align:-0.3551999999999999em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.9996399999999999em;vertical-align:-0.3551999999999999em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span></span></span></span>を筆算で解きます。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648887118177.png" alt="" loading="lazy"><br>
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>10001</mn><msub><mn>1</mn><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msub><mo>÷</mo><mn>10</mn><msub><mn>1</mn><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msub><mo>=</mo><mn>11</mn><msub><mn>1</mn><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msub></mrow><annotation encoding="application/x-tex">100011_{(2)} \div 101_{(2)}=111_{(2)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9996399999999999em;vertical-align:-0.3551999999999999em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.9996399999999999em;vertical-align:-0.3551999999999999em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9996399999999999em;vertical-align:-0.3551999999999999em;"></span><span class="mord">1</span><span class="mord">1</span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">2</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span></span></span></span></p>
+<h3 id="もっと高速な方法">もっと高速な方法：</h3>
+<p>割り算の計算法則：<br>
+(1) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>÷</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0 \div 0=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span><br>
+(2) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mo>÷</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0 \div 1=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span><br>
+(3) <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>÷</mo><mn>1</mn><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \div 1=1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">÷</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></p>
+<figure data-type="image" tabindex="1"><img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648887198289.png" alt="" loading="lazy"></figure>
+<p>aとb（２進数）を正の整数として、aの2進数の長さをmとし、bの2進数の長さをnとして、商の2進数の長さをkとします。</p>
+<p>このとき、2進数の長さ<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>≤</mo><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">≤n + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>の2つの数字を最大でk回引き算しなければならないです。</p>
+<p><mark>この計算には<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>k</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(kn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>の時間がかかります。</mark></p>
+<h2 id="まとめ">まとめ：</h2>
+<h3 id="本当は複雑度-計算量は二種類あります">本当は複雑度、計算量は二種類あります。</h3>
+<p>– 空間複雑度（space complexity）<br>
+• cpuの数やメモリの量による制約がありますため普段は意識しないです。</p>
+<p>– 時間複雑度（time complexity）<br>
+• 基本的にはこちらを考えます。</p>
+<h3 id="この文章で紹介した時間複雑度のまとめ">この文章で紹介した時間複雑度のまとめ：</h3>
+<p>aとbを整数とします。</p>
+<ol>
+<li>
+<p>aとbを足すのに必要な時間は<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">O</mi><mo>(</mo><mi>max</mi><mo>⁡</mo><mo>{</mo><mi mathvariant="normal">size</mi><mo>⁡</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">\mathrm{O}(\max \{\operatorname{size} a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">O</span></span><span class="mopen">(</span><span class="mop">max</span><span class="mopen">{</span><span class="mop"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm">z</span><span class="mord mathrm">e</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span></span></span></span>, size <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">b</mi><mo>}</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathrm{b}\})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">b</span></span><span class="mclose">}</span><span class="mclose">)</span></span></span></span>である。</p>
+</li>
+<li>
+<p>aとbの掛け算は時間<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">O</mi><mo>(</mo><mo>(</mo><mi mathvariant="normal">size</mi><mo>⁡</mo><mi>a</mi><mo>)</mo><mo>(</mo><mi mathvariant="normal">size</mi><mo>⁡</mo><mi mathvariant="normal">b</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathrm{O}((\operatorname{size} a)(\operatorname{size} \mathrm{b}))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">O</span></span><span class="mopen">(</span><span class="mopen">(</span><span class="mop"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm">z</span><span class="mord mathrm">e</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mopen">(</span><span class="mop"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm">z</span><span class="mord mathrm">e</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">b</span></span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>を必要とする。</p>
+</li>
+<li>
+<p>aをbで割るには時間<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">O</mi><mo>(</mo><mo>(</mo><mi mathvariant="normal">size</mi><mo>⁡</mo><mi mathvariant="normal">b</mi><mo>)</mo><mo>(</mo><mi mathvariant="normal">size</mi><mo>⁡</mo><mi mathvariant="normal">q</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathrm{O}((\operatorname{size} \mathrm{b})(\operatorname{size} \mathrm{q}))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">O</span></span><span class="mopen">(</span><span class="mopen">(</span><span class="mop"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm">z</span><span class="mord mathrm">e</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">b</span></span><span class="mclose">)</span><span class="mopen">(</span><span class="mop"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm">z</span><span class="mord mathrm">e</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">q</span></span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>が必要で、qは商である。</p>
+</li>
+</ol>
+<p>すべてのアルゴリズムは空間<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">O</mi><mo>(</mo><mi mathvariant="normal">size</mi><mo>⁡</mo><mi>a</mi><mo>+</mo><mi mathvariant="normal">size</mi><mo>⁡</mo><mi mathvariant="normal">b</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\mathrm{O}(\operatorname{size} a+\operatorname{size} \mathrm{b})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">O</span></span><span class="mopen">(</span><span class="mop"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm">z</span><span class="mord mathrm">e</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mord mathrm">s</span><span class="mord mathrm">i</span><span class="mord mathrm">z</span><span class="mord mathrm">e</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathrm">b</span></span><span class="mclose">)</span></span></span></span>を使用する。</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%8A%A0%E6%B3%95%E6%B8%9B%E6%B3%95">加法/減法：</a>
+<ul>
+<li><a href="#%E9%AB%98%E6%A0%A1%E3%81%AE%E6%96%B9%E6%B3%95">高校の方法：</a></li>
+<li><a href="#%E3%82%88%E3%82%8A%E5%8A%B9%E7%8E%87%E7%9A%84%E3%81%AA%E6%96%B9%E6%B3%95">より効率的な方法</a></li>
+<li><a href="#%E6%99%82%E9%96%93%E8%A4%87%E9%9B%91%E5%BA%A6">時間複雑度</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B9%97%E6%B3%95">乗法</a>
+<ul>
+<li><a href="#sch%C3%B6nhage%E3%81%A8strassen%E3%81%AE%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">SchönhageとStrassenのアルゴリズム</a>
+<ul>
+<li><a href="#%E7%89%B9%E5%BE%B4">特徴：</a></li>
+<li><a href="#%E6%89%8B%E9%A0%86">手順:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E9%99%A4%E6%B3%95">除法：</a>
+<ul>
+<li><a href="#%E3%82%82%E3%81%A3%E3%81%A8%E9%AB%98%E9%80%9F%E3%81%AA%E6%96%B9%E6%B3%95">もっと高速な方法：</a></li>
+</ul>
+</li>
+<li><a href="#%E3%81%BE%E3%81%A8%E3%82%81">まとめ：</a>
+<ul>
+<li><a href="#%E6%9C%AC%E5%BD%93%E3%81%AF%E8%A4%87%E9%9B%91%E5%BA%A6-%E8%A8%88%E7%AE%97%E9%87%8F%E3%81%AF%E4%BA%8C%E7%A8%AE%E9%A1%9E%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99">本当は複雑度、計算量は二種類あります。</a></li>
+<li><a href="#%E3%81%93%E3%81%AE%E6%96%87%E7%AB%A0%E3%81%A7%E7%B4%B9%E4%BB%8B%E3%81%97%E3%81%9F%E6%99%82%E9%96%93%E8%A4%87%E9%9B%91%E5%BA%A6%E3%81%AE%E3%81%BE%E3%81%A8%E3%82%81">この文章で紹介した時間複雑度のまとめ：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/math/">
+              <h3 class="post-title">
+                Math
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
