@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>論文紹介ーBERT | Sunry’s　Blog</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://sunry-ai.github.io/sunruoyao.github.io//favicon.ico?v=1648879933997">
+<link rel="stylesheet" href="https://sunry-ai.github.io/sunruoyao.github.io//styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="論文「 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding」を紹介します〜。
+
+背景紹介
+近年、業務の効率化や生産性の向上を実現す..." />
+    <meta name="keywords" content="MachineLearning" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://sunry-ai.github.io/sunruoyao.github.io/">
+        <img src="https://sunry-ai.github.io/sunruoyao.github.io//images/avatar.png?v=1648879933997" class="site-logo">
+        <h1 class="site-title">Sunry’s　Blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/home" class="site-nav">
+            About Me
+          </a>
+        
+      
+        
+          <a href="/or" class="site-nav">
+            経営工学関連
+          </a>
+        
+      
+        
+          <a href="/math" class="site-nav">
+            数学関連
+          </a>
+        
+      
+        
+          <a href="tag/post/machinelearning" class="site-nav">
+            機械学習関連
+          </a>
+        
+      
+        
+          <a href="/post/cryptography" class="site-nav">
+            暗号学関連
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Welcome to my world !
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://sunry-ai.github.io/sunruoyao.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">論文紹介ーBERT</h2>
+            <div class="post-date">2022-04-02</div>
+            
+              <div class="feature-container" style="background-image: url('https://sunry-ai.github.io/sunruoyao.github.io//post-images/bert.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>論文「 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding」を紹介します〜。</p>
+<!-- more -->
+<h2 id="背景紹介">背景紹介</h2>
+<p>近年、業務の効率化や生産性の向上を実現するテクノロジーとして「OCRとRPAの組合せ」が注目を集めています。</p>
+<p>「OCRとRPAの組合せ」のイメージ：<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648877049647.png" alt="" loading="lazy"></p>
+<p>従来のDEFと正規表現を用いたルールベースの抽出がよく使われていました。しかし、この方法では人為的に特徴量の作成が必要のため、システム導入コストが非常に高いです💰。</p>
+<p>近年、自然言語処理技術の進化によって、自動的に特徴量を抽出ができる深層学習に基づいた固有表現抽出(Named Entity Recognition)の方法が広く使われています。代表的な手法として、LSTM+CRF,S-LSTMなどがあります。　<br>
+　<br>
+<em>固有表現抽出(Named Entity Recognition、NER)：文章中に特定の意味を持つ実体（人名、地名、機関名、固有名詞など）を識別することです。</em></p>
+<p>2018年の自然言語処理に大きな革新を持ってきた「BERT」の登場により、非常に高精度のNERができるようになりました。</p>
+<h2 id="bertの革新点">BERTの革新点</h2>
+<p>「Attentions is All You Need」で提出されたTransformerをよく使用されましたので、ここでBERTとTransformerを比べて、革新点を紹介します。</p>
+<p>Transformerは、単語を順番に計算する代わりに、単語間の距離（Positional Encoding）、注意メカニズム（Multi-Head Attention）、および全結合（Feed Forward）を用いたモデルです。その為、翻訳のとき、各単語の対応する単語を予測できます。</p>
+<p>例えば：<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648878220811.png" alt="" loading="lazy"></p>
+<p>この例で、Transformerを使ったら、「私」が「I」と対応して、「機械」が「machine」と対応することが識別できます。<br>
+BERTは各単語を対応させて予測するよりも、すべての単語間の関係も考慮して翻訳結果を予測するできます。上の例で、コンピュータが句の中の名詞、助動詞と動詞の位置とお互いの関係も学習できますので、「love」は必ず「I」の後ろであることも学習できます。したがって、BERTを使って翻訳結果を予測できた結果のほうが優れることを予想できますね。</p>
+<h2 id="bertの主なアイディア">BERTの主なアイディア</h2>
+<p>この論文の主要なアイディアは2つあります。<br>
+1つ目は16層の双方向Transformerに基づいて、「Masked LM」と「Next Sentence Prediction」（NSP）の事前学習手法を提案したことです。<br>
+2つ目は下流のミッションに合わせた「Fine-Tuning」です。</p>
+<h3 id="事前学習ーmasked-lm">事前学習ー「Masked LM」</h3>
+<p><em>トークン：コンパイラなどがプログラムのソースコードを解析する際に、コード上で意味を持つ最小単位の文字の並びのことをトークン（token）という。</em></p>
+<p>「Masked LM」は単純に入力トークン(単語)の一部をランダムにマスクし、そのマスクされたトークン(単語)を予測する手法です。どの単語でも「MASK」によって置換される可能性があります。</p>
+<p>BERTモデルは、多層の双方向Transformerを特徴抽出器として使用することで、前後の両方向からの情報を同時に利用することができるため、「MASK」単語を予測する際に、文脈情報を参照した上での「MASK」の予測ができます。</p>
+<p>例えば：<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648879010124.png" alt="" loading="lazy"><br>
+ここで単語をマスクして、他に単語を使ってマスクされた「が」と「私」を予測します。この過程で、コンピュータが単語間の関係を学べます。</p>
+<p>この方法の欠点は、マスクされた単語を実際の「MASK」トークンに置き換えないのような事前学習と微調整の間にミスマッチが生じることです。</p>
+<p>ミスマッチを解決為に、複数の試験のデータを比較して、15%マスクされたトレーニングデータのトークンの中で、80%を「MASK」というトークンに置き換え、10%をランダムなトークンに置き換え、残りの10%は元々のトークンを保持します。損失関数は、マスクされたトークンのみを用いて計算する解決策を選択されました。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648879218450.png" alt="" loading="lazy"></p>
+<h3 id="事前学習ー-nsp-タスク">事前学習ー「 NSP タスク」</h3>
+<p>文章を読むときには、文と文の関係を容易に判断することができますが、機械処理では、文の始まりと終わりの提示トークン[CLS]と[SEP]が必要です。</p>
+<p>文章の前頭は[CLS]マーカーで提示して、この2つの文は[SEP]マーカーで区切られています。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648879405704.png" alt="" loading="lazy"><br>
+[CLS]は、入力の配列Bが配列Aの次の配列であるかどうかを判断するバイナリ分類タスクとして使用されるます。<br>
+論文で訓練するとき、サンプルの入力配列Bの50%は真の次の文、すなわちLabel = IsNextであり、入力配列Bの50%はランダムに生成されたもの、すなわちLabel = NotNextです。</p>
+<p>このモデルを学習する場合、2つの文の関係を97～98％の精度を達成できました。</p>
+<p><strong>そして、BERTもこれまでの学習済みモデルと比較して、「Masked LM」と「NSP」の学習手法を通じて、双方向の文脈情報を捉えることができます。</strong></p>
+<h3 id="ファインチュニングーfine-tuning">「ファインチュニングーFine-Tuning」</h3>
+<p>ファインチューニングは、事前学習で得られたパラメータを初期値として、下流で実際のNLPタスクに合わせて学習させることです。</p>
+<p>BERTで解決できる課題は、主に一般的な分類タスク、類似性の計算タスク、質問と回答のタスクとNERのタスクの4つタスクがあります。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648879533545.png" alt="" loading="lazy"></p>
+<h2 id="bertー成果">「BERTー成果」</h2>
+<p>2018年に初めて導入された際には、BERTのファインチュニングはQA、NER、テスト分類など11種類のNLPタスクで高い性能を発揮できました。現在でもBERTベースのモデルがGLUEの上位を占めています。<br>
+<img src="https://sunry-ai.github.io/sunruoyao.github.io//post-images/1648879604645.png" alt="" loading="lazy"><br>
+資料：<a href="https://gluebenchmark.com/leaderboard">https://gluebenchmark.com/leaderboard</a></p>
+<h2 id="bertー貢献">「BERTー貢献」</h2>
+<p>BERTは、独自の高い性能を持つ2段階のプレトレーニング＋ファインチューンモデリングの実践の基礎を築いています。その後の研究でも、このパターンを参照して多い改良したモデルを提出されます。</p>
+<p>また、 著者らはその論文の中で、「双方向」（Bidirectional Representation）の重要性を示しました。 BERTがこの結論に達して以来、XLNetやALBERTなどの後続のモデルでも、デフォルトの設定として双方向性を使用しています。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://sunry-ai.github.io/sunruoyao.github.io/tag/post/machinelearning/" class="tag">
+                    MachineLearning
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://sunry-ai.github.io/sunruoyao.github.io/post/math/">
+                  <h3 class="post-title">
+                    Math
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
