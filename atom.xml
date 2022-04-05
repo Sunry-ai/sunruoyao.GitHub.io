@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunry-ai.github.io/sunruoyao.github.io/</id>
     <title>Sunry’s　Blog</title>
-    <updated>2022-04-05T04:09:50.365Z</updated>
+    <updated>2022-04-05T07:12:49.205Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunry-ai.github.io/sunruoyao.github.io/"/>
     <link rel="self" href="https://sunry-ai.github.io/sunruoyao.github.io/atom.xml"/>
@@ -10,6 +10,45 @@
     <logo>https://sunry-ai.github.io/sunruoyao.github.io/images/avatar.png</logo>
     <icon>https://sunry-ai.github.io/sunruoyao.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Sunry’s　Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[「学部」卒業研究]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/xue-bu-zu-ye-yan-jiu/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/xue-bu-zu-ye-yan-jiu/">
+        </link>
+        <updated>2022-04-05T08:37:17.000Z</updated>
+        <summary type="html"><![CDATA[<p>私の卒業研究のテーマは「AES暗号の関数変更の安全性への影響」です。資料をここで載せます。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>私の卒業研究のテーマは「AES暗号の関数変更の安全性への影響」です。資料をここで載せます。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[二次ふるい法の分析]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/er-ci-huruifa-no/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/er-ci-huruifa-no/">
+        </link>
+        <updated>2022-04-05T07:01:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>二次ふるい法の分析<br>
+他のファクタリングアルゴリズムの効率性</p>
+<p>「因数分解アルゴリズム」の「二次ふるい法」を理解した後でこの文章を読んでください。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>二次ふるい法の分析<br>
+他のファクタリングアルゴリズムの効率性</p>
+<p>「因数分解アルゴリズム」の「二次ふるい法」を理解した後でこの文章を読んでください。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[因数分解アルゴリズム エラトステネスの篩/𝑝−1法/２次ふるい法]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/yin-shu-fen-jie/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/yin-shu-fen-jie/">
+        </link>
+        <updated>2022-04-05T06:57:23.000Z</updated>
+        <summary type="html"><![CDATA[<p>RSAシステムやRabinシステムの安全性は、正の整数を素因数分解することの難しさと密接に関係していることを見てきました。しかし、整数の因数分解問題が実際に解決困難であるかどうかは分かっていないです。それどころか、これまでに多くの効率的な整数の因数分解アルゴリズムが開発されており、安全なRSAモジュラスに必要な桁数も512ビットから1024ビットに増えています。</p>
+<p>本文章では，いくつかの重要な因数分解アルゴリズムについて説明します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>RSAシステムやRabinシステムの安全性は、正の整数を素因数分解することの難しさと密接に関係していることを見てきました。しかし、整数の因数分解問題が実際に解決困難であるかどうかは分かっていないです。それどころか、これまでに多くの効率的な整数の因数分解アルゴリズムが開発されており、安全なRSAモジュラスに必要な桁数も512ビットから1024ビットに増えています。</p>
+<p>本文章では，いくつかの重要な因数分解アルゴリズムについて説明します。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[AESの詳細ー輪読]]></title>
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/aes/</id>
@@ -89,41 +128,6 @@
         <summary type="html"><![CDATA[<p>mを法とする既約剰余類群の定理・性質を紹介します。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>mを法とする既約剰余類群の定理・性質を紹介します。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Residue Class Ring　剰余類環＋Fields　体]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/residue-class-ring-sheng-yu-lei-huan-fields-ti/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/residue-class-ring-sheng-yu-lei-huan-fields-ti/">
-        </link>
-        <updated>2022-04-02T12:24:42.000Z</updated>
-        <summary type="html"><![CDATA[<p>この文章は環・剰余類環・体の定義・性質を説明します。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>この文章は環・剰余類環・体の定義・性質を説明します。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Groups　群 ]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/groups/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/groups/">
-        </link>
-        <updated>2022-04-02T12:14:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>群論は数学の一つ重要な学科です。<br>
-ここで群の定義と性質を簡単に紹介します。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>群論は数学の一つ重要な学科です。<br>
-ここで群の定義と性質を簡単に紹介します。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[群の位数  Order of Group Elements]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/group-elements/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/group-elements/">
-        </link>
-        <updated>2022-04-02T11:59:53.000Z</updated>
-        <summary type="html"><![CDATA[<p>群の位数について性質を説明します。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>群の位数について性質を説明します。</p>
 ]]></content>
     </entry>
 </feed>
