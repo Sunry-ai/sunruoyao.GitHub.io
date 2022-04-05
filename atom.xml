@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sunry-ai.github.io/sunruoyao.github.io/</id>
     <title>Sunry’s　Blog</title>
-    <updated>2022-04-05T03:52:09.520Z</updated>
+    <updated>2022-04-05T03:58:18.882Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sunry-ai.github.io/sunruoyao.github.io/"/>
     <link rel="self" href="https://sunry-ai.github.io/sunruoyao.github.io/atom.xml"/>
@@ -61,21 +61,10 @@
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/fast-exponentiation/</id>
         <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/fast-exponentiation/">
         </link>
-        <updated>2022-04-02T12:07:52.000Z</updated>
-        <summary type="html"><![CDATA[<p>Fast Exponentiationの定義・性質とアルゴリズムを紹介します。</p>
+        <updated>2022-04-02T13:07:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>高速指数関数Fast Exponentiationの定義・性質とアルゴリズムを紹介します。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>Fast Exponentiationの定義・性質とアルゴリズムを紹介します。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[群の位数  Order of Group Elements]]></title>
-        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/group-elements/</id>
-        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/group-elements/">
-        </link>
-        <updated>2022-04-02T11:59:53.000Z</updated>
-        <summary type="html"><![CDATA[<p>群の位数について性質を説明します。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>群の位数について性質を説明します。</p>
+        <content type="html"><![CDATA[<p>高速指数関数Fast Exponentiationの定義・性質とアルゴリズムを紹介します。</p>
 ]]></content>
     </entry>
     <entry>
@@ -83,7 +72,7 @@
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/euclidean-algorithm/</id>
         <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/euclidean-algorithm/">
         </link>
-        <updated>2022-04-02T11:57:05.000Z</updated>
+        <updated>2022-04-02T12:57:05.000Z</updated>
         <summary type="html"><![CDATA[<p>ユークリッド・アルゴリズムは、2つの整数の最大公約数を非常に効率的に求めるものです。</p>
 <p>拡張ユークリッドアルゴリズムの解析・性質・時間複雑度をここで説明します〜</p>
 ]]></summary>
@@ -96,7 +85,7 @@
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/multiplicative-group-of-residues-mod-m/</id>
         <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/multiplicative-group-of-residues-mod-m/">
         </link>
-        <updated>2022-04-02T11:40:19.000Z</updated>
+        <updated>2022-04-02T12:40:19.000Z</updated>
         <summary type="html"><![CDATA[<p>mを法とする既約剰余類群の定理・性質を紹介します。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>mを法とする既約剰余類群の定理・性質を紹介します。</p>
@@ -107,10 +96,21 @@
         <id>https://sunry-ai.github.io/sunruoyao.github.io/post/residue-class-ring-sheng-yu-lei-huan-fields-ti/</id>
         <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/residue-class-ring-sheng-yu-lei-huan-fields-ti/">
         </link>
-        <updated>2022-04-02T11:24:42.000Z</updated>
+        <updated>2022-04-02T12:24:42.000Z</updated>
         <summary type="html"><![CDATA[<p>この文章は環・剰余類環・体の定義・性質を説明します。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>この文章は環・剰余類環・体の定義・性質を説明します。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[群の位数  Order of Group Elements]]></title>
+        <id>https://sunry-ai.github.io/sunruoyao.github.io/post/group-elements/</id>
+        <link href="https://sunry-ai.github.io/sunruoyao.github.io/post/group-elements/">
+        </link>
+        <updated>2022-04-02T11:59:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>群の位数について性質を説明します。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>群の位数について性質を説明します。</p>
 ]]></content>
     </entry>
     <entry>
